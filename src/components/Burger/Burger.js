@@ -13,7 +13,7 @@ const burger = (props) => {
         .reduce((arr,el)=>{
             return arr.concat(el)
         },[])
-if(transformedIngredients.length ==0){
+if(transformedIngredients.length ===0){
     transformedIngredients=<p>Please add ingredients!</p>
 }
 console.log(transformedIngredients);
@@ -22,6 +22,7 @@ console.log(transformedIngredients);
             <BurgerIngredient type="bread-top" />
             {transformedIngredients}
             <BurgerIngredient type="bread-bottom" />
+            <strong>{props.price.toFixed(2)}</strong>
         </div>
     );
 }
